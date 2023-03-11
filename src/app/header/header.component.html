@@ -1,0 +1,16 @@
+<header fxLayout="row" fxLayoutAlign="space-between center">
+  <div fxLayout="row" class="logo" fxLayoutAlign="center center">
+    <img src="/assets/images/logo.png" alt="Logo" width="125" height="46">
+  </div>
+  <nav fxLayout="row" fxLayoutAlign="end center">
+    <ul fxLayout="row" fxLayoutGap="24px" fxLayoutAlign="center center">
+      <li><a routerLink="/home" routerLinkActive="active-link">Home</a></li>
+      <li><a routerLink="/about-us" routerLinkActive="active-link">About us</a></li>
+      <li><a routerLink="/services" routerLinkActive="active-link">Services</a></li>
+      <li><a routerLink="/our-team" routerLinkActive="active-link">Our teams</a></li>
+    </ul>
+  </nav>
+  <div fxLayout="row" class="button" fxLayoutAlign="end center">
+    <button (click)="contactUs()">Contact Us</button>
+  </div>
+</header>
