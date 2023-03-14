@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -6,8 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor() {
+
+  constructor(private router: Router) {
+  }
+  navigateToPage(pageName: string) {
+    this.router.navigate([pageName]).then();
   }
   contactUs(){
+    
   }
 }

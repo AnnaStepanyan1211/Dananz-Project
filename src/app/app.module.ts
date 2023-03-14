@@ -13,7 +13,7 @@ import {MatButtonModule} from "@angular/material/button";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {MatInputModule} from "@angular/material/input";
-
+import {MatMenuModule} from "@angular/material/menu";
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,7 @@ import {MatInputModule} from "@angular/material/input";
     ServicesComponent,
     OurTeamsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
     imports: [
         BrowserModule,
@@ -30,7 +30,8 @@ import {MatInputModule} from "@angular/material/input";
         MatIconModule,
         BrowserAnimationsModule,
         MatButtonModule,
-        MatInputModule
+        MatInputModule,
+        MatMenuModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,16 +1,34 @@
-<header fxLayout="row" fxLayoutAlign="space-between center">
-  <div fxLayout="row" class="logo" fxLayoutAlign="center center">
+<header class="header">
+  <div class="hidden-menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="white-button">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" class="white-menu">
+      <button class="item" mat-menu-item (click)="navigateToPage('home')">
+        <span>Home</span>
+      </button>
+      <button class="item" mat-menu-item (click)="navigateToPage('about-us')">
+        <span>About us</span>
+      </button>
+      <button class="item" mat-menu-item (click)="navigateToPage('services')">
+        <span>Services</span>
+      </button>
+      <button class="item" mat-menu-item (click)="navigateToPage('our-team')">
+        <span>Our teams</span>
+      </button>
+    </mat-menu>
+
+  </div>
+  <div class="logo">
     <img src="/assets/images/logo.png" alt="Logo" width="125" height="46">
   </div>
-  <nav fxLayout="row" fxLayoutAlign="end center">
-    <ul fxLayout="row" fxLayoutGap="24px" fxLayoutAlign="center center">
+  <nav>
+    <ul>
       <li><a routerLink="/home" routerLinkActive="active-link">Home</a></li>
       <li><a routerLink="/about-us" routerLinkActive="active-link">About us</a></li>
       <li><a routerLink="/services" routerLinkActive="active-link">Services</a></li>
       <li><a routerLink="/our-team" routerLinkActive="active-link">Our teams</a></li>
     </ul>
-  </nav>
-  <div fxLayout="row" class="button" fxLayoutAlign="end center">
     <button (click)="contactUs()">Contact Us</button>
-  </div>
+  </nav>
 </header>
