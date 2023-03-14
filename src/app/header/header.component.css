@@ -5,9 +5,11 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.hidden-menu{
+
+.hidden-menu {
   display: none;
 }
+
 .logo {
   width: 20%;
   height: 100%;
@@ -21,56 +23,74 @@ img {
 }
 
 nav {
-  min-width: 30%;
+  min-width: 50%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 ul {
+  width: 100%;
   margin-top: 20px;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 10px;
+  align-items: space-between;
+  justify-content: space-between;
 }
 
 li {
   height: 24px;
   list-style-type: none;
-  margin-left: 24px;
 }
 
-li > a {
+li>a {
+  font-size: 16px;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
   color: #333333;
   text-decoration: none;
 }
 
-li > a:hover {
-  font-weight: bold;
-  font-size: 18px;
+li>a:hover {
+  font-weight: 800;
 }
 
 
-button{
+button {
   width: 142px;
   height: 49px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-left: 3rem;
+  border: 0.1rem solid #3C3C3C;
   background: #2C3878;
-  border: 1px solid #3C3C3C;
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
   color: #FFFFFF;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+.underline-on-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-on-hover::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.underline-on-hover:hover::before {
+  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -86,9 +106,10 @@ button:hover {
     display: none;
   }
 
-  .button {
-    margin-left: auto;
+  button {
+    margin-left: 0;
   }
+
   .logo {
     width: 100%;
     height: 100%;
@@ -96,17 +117,19 @@ button:hover {
     align-items: center;
     justify-content: center;
   }
-  .hidden-menu{
+
+  .hidden-menu {
     display: inline;
   }
+
   .white-button {
     background-color: transparent;
     color: black;
     border: none;
   }
+
   .item {
     background: none;
-    border:none;
+    border: none;
   }
 }
-

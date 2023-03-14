@@ -1,15 +1,14 @@
-.ng-container {
+.main-container {
   width: 100%;
-  max-height: 2937px;
   display: flex;
   flex-direction: column;
-  /*align-items: center;*/
   justify-content: space-between;
+  font-family: "Poppins", sans-serif;
 }
 
 .title-block {
   max-width: 1200px;
-  height: 320px;
+  padding: 2.6rem 0.3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +17,6 @@
 
 .title {
   max-width: 486px;
-  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,52 +24,49 @@
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
   font-style: normal;
   text-align: center;
   font-weight: 700;
   font-size: 56px;
   color: #000000;
+  line-height: 4rem;
+  margin: 0;
 }
 
 p {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  text-align: center;
   color: #000000;
+  font-style: normal;
+  text-align: center;
 }
 
-.first_background-pic {
-  max-width: 100%;
-  height: auto;
-  padding: 5px;
-}
-
-.info-block{
+.info-block {
   max-width: 1204px;
-  min-height: 500px;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.info{
+
+.info {
   max-width: 588px;
   min-height: 250px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px;
 }
-.subtitles{
+
+.subtitles {
+  font-size: 24px;
+  font-weight: 600;
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
   color: #333333;
 }
-.info-detail{
+
+.info-detail {
   max-width: 430px;
   min-height: 23px;
   display: flex;
@@ -80,48 +75,44 @@ p {
 }
 
 .info-detail>p {
+  font-size: 18px;
+  font-weight: 400;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
   color: #9c9c9c;
 }
 
 .paragraph {
+  font-size: 18px;
+  font-weight: 400;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
   color: #9c9c9c;
   text-align: left;
 }
 
-.second-background-pics {
+.pics {
   max-width: 100%;
+  padding: 0 0.5rem 0.5rem;
   height: auto;
   display: flex;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
 }
 
-.fifth-background {
-  max-width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sixth-background {
-  max-width: 100%;
-  max-height: 512px;
-  display: flex;
-  justify-content: space-between;
+.pic {
+  width: 100%;
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+}
+
+.title>p {
+  margin-top: 2.3rem;
+  line-height: 1.6rem;
 }
 
 @media only screen and (max-width: 380px) {
@@ -129,24 +120,40 @@ img {
     display: flex;
     flex-direction: column;
   }
+
   .sixth-background {
     display: flex;
     flex-direction: column;
   }
-  .info-detail{
+
+  .info-detail {
     display: flex;
     flex-direction: column;
   }
 }
+
 @media only screen and (max-width: 601px) {
-  .info-block{
+  .info-block {
     display: flex;
     flex-direction: column;
   }
-  .paragraph{
+
+  .paragraph {
     text-align: justify;
   }
+
+  .pics {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+  }
+
+  h1 {
+    line-height: 3rem;
+  }
+
 }
+
 @media only screen and (max-width: 455px) {
   h1 {
     font-size: 36px;
